@@ -11,7 +11,7 @@ def home(): return "Gemini Bot is Online!"
 def run(): app.run(host='0.0.0.0', port=8080)
 
 # 2. KALITLAR (O'zingiznikini qo'ying)
-TELEGRAM_TOKEN = "8446115576:AAHqk8tOIKDtWFoghHNq83K3gF0nejqzOc"
+TELEGRAM_TOKEN = "8446115576:AAH49k8t0IKDtMFoghHNq83K3gF0nejqzOc"
 GEMINI_API_KEY = "AIzaSyADPWBzISmbtMR5vMeAui08BQ8GBL3uiSY"
 
 genai.configure(api_key=GEMINI_API_KEY)

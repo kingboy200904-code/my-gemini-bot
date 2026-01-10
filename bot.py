@@ -34,7 +34,7 @@ def handle_photo(message):
         
         base64_image = encode_image("img.jpg")
         response = client.chat.completions.create(
-            model="llama-3.2-11b-vision-preview",
+            model="llama-3.2-11b-vision-instruct",
             messages=[{"role": "user", "content": [{"type": "text", "text": "Rasmdagi barcha matnlarni o'qi va ularni o'zbek tiliga tarjima qilib ber. Agar rasmda matn bo'lmasa, rasmda nima borligini batafsil ayt."}, {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}]}]
         )
         bot.reply_to(message, response.choices[0].message.content)

@@ -46,7 +46,7 @@ def handle_photo(message):
 def handle_text(message):
     try:
         completion = client.chat.completions.create(
-            model="llama-3.2-90b-vision-preview.",
+            model="llama-3.2-90b-vision-preview",
             messages=[{"role": "user", "content": message.text}]
         )
         bot.reply_to(message, completion.choices[0].message.content)

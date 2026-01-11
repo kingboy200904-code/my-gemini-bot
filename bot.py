@@ -53,5 +53,7 @@ def handle_text(message):
 
 if __name__ == "__main__":
     t = Thread(target=run)
+    t.daemon = True # Shu qatorni qo'shing
     t.start()
-    bot.infinity_polling()
+    bot.remove_webhook() # Shu qatorni qo'shing
+    bot.infinity_polling(skip_pending=True) # skip_pending=True qo'shing

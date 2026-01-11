@@ -14,7 +14,7 @@ def home(): return "Bot is Online!"
 def run(): app.run(host='0.0.0.0', port=8080)
 
 # MA'LUMOTLAR (TOKENingizni va Kalitingizni tekshirib qo'ying)
-TOKEN = "8446115576:AAH49k8t0IKDtMFoghHNq83K3gF0nejqzOc"
+TOKEN = "8446115576:AAEHRAL5_R-IkIl9BeSyxfuxAtOvY5Dpof8"
 GROQ_API_KEY = "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"
 
 client = Groq(api_key=GROQ_API_KEY)
@@ -33,7 +33,7 @@ def handle_photo(message):
         
         base_64_image = encode_image("img.jpg")
         response = client.chat.completions.create(
-            model="llama-3.2-11b-vision-preview",
+            model="llama-3.2-90b-vision-preview",
             messages=[{"role": "user", "content": [{"type": "text", "text": "Rasmda nima bor? O'zbekcha javob ber."}, {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base_64_image}"}}]}]
         )
         bot.reply_to(message, response.choices[0].message.content)

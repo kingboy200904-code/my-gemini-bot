@@ -13,7 +13,7 @@ def run(): app.run(host='0.0.0.0', port=8080)
 
 # 2. MA'LUMOTLAR (TOKEN va KEY'ni aniq qo'ying)
 TOKEN = "8446115576:AAHqk8tOIKDtWFoghHNq83K3gF0nejqzOc"
-GROQ_API_KEY = "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" # <--- Kalitni to'liq qo'ying!
+GROQ_API_KEY = "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" # <--- Kalitni to'liq qo'ying!
 
 client = Groq(api_key=GROQ_API_KEY)
 bot = telebot.TeleBot(TOKEN)
